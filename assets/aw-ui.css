@@ -1,0 +1,142 @@
+
+:root{
+
+    --primary:#9666ff;
+    --primaryLight:rgba(150, 102, 255,0.47);
+    --primaryDark:#2e106e;
+    
+    --warning:#FF9666;
+    --success:#49FF82;
+    --danger:#FF3A60;
+    --info:#66D0FF;
+    
+    --color:#555;
+    --colorDeep:#333;
+    --colorLight:#ddd;
+    --font:'Open Sans',sans-serif;
+    --bodybg:white;
+ 
+}
+body{
+    font-family:var(--font);
+    font-weight:300;
+    background:var(--bodybg);
+    color:var(--color);
+    margin:0;
+    padding:0;
+}
+section{
+    padding:0.5rem;
+}
+
+h1,h2,h3,hr,h5,h6{
+    color:var(--colorDeep);
+    font-weight:300;
+    font-family:var(--font);
+    line-height:1.5;
+}
+h1{font-size:3.5rem;}
+h2{font-size:3rem;}
+h3{font-size:2.5rem;}
+h4{font-size:2rem;}
+h5{font-size:1.5rem;
+  
+}
+h6{font-size:1.25rem;
+   font-weight:500;
+   line-height:0.75em;
+}
+
+p{
+    color:var(--color);
+    font-weight:300;
+    font-size:1.075rem;
+    margin:1rem 0;
+    margin-top:0;
+}
+
+::selection{
+    background:var(--primaryLight);
+    color:var(--primaryDark);
+}
+
+mark{
+    background:var(--warning);
+    color:white;
+}
+
+a:not([ignore]){
+    color:var(--primary);
+    font-weight:400;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent ;
+}
+a:not([ignore]):active{
+    color:var(--primaryLight);
+}
+a:visited{
+    color:var(--primaryLight);
+}
+
+
+/*hr seperator---------------------*/
+hr:not([data-text]){
+    height:.1rem;
+    background:var(--colorLight);
+    width:100%;
+    border:none;
+    border-radius:500px;
+    line-height:1em;
+    outline:none;
+}
+hr[data-text]{
+    text-align:center ;
+    border:none;
+    outline:none;
+    line-height:1.3em;
+    position:relative ;
+    color:var(--colorLight);
+}
+hr[data-text]::after{
+    content:attr(data-text);
+    color:#bbb;
+    font-weight:300;
+    background:var(--bodybg);
+    display:inline-block ;
+    position:relative;
+    user-select:none;
+    padding:0.5rem;
+    line-height:1.3em;
+}
+hr[data-text]::before{
+    content:'';
+    background:var(--colorLight) ;
+    width:100%;
+    position:absolute;
+    height:0.1rem;
+    top:50%;
+    left:0;
+}
+ul{
+    list-style-type:square;
+}
+
+ul li,ol li{
+    padding-left:0.5rem;
+    margin:0.25rem;
+}
+
+
+
+/* demonstrative purpouses*/
+.flex{
+    display:flex;
+    justify-content:space-evenly;
+}
+.flex div{
+    width:50px;
+    height:50px;
+    border-radius:0.3rem;
+}
+
+
